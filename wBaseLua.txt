@@ -21,7 +21,7 @@ function onCollisionEnter(a)
     if not Global.getVar("oWisOn") or o == a.collision_object or o == 1 then do return  end  end
     o = a.collision_object  local ow = getObjectFromGUID(Global.getVar("oW4TTale"))
     local g = string.sub(o.getName(), 1, 4)  if g == "SET_" then g = "OWx_" end
-    local i = "https://sites.google.com/site/rolesystemssky/x.png"
+    local i = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/x.png"
     if self.getDescription() == "" and g == "SBx_" and o.name == "Custom_Token" then newBase()
       elseif self.getDescription() == "" and g == "OWx_" and o.name == "Bag" then doImport()
       elseif self.getDescription() != "" and o.getCustomObject().image == i then addLink()
@@ -55,7 +55,7 @@ function doImport()
     end
     if o.getDescription() == "" then broadcastToAll("Creating Hidden Base...", {0.943, 0.745, 0.14})
       local t = {}  t.position = {-10, -45, 0}  t.callback = "cbCTBase"  t.callback_owner = self  local i = {}
-      i.image = "https://sites.google.com/site/rolesystemssky/table_wood.jpg"  i.thickness = 0.1
+      i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/tablewood.jpg"  i.thickness = 0.1
       t.type = "Custom_Token"  local o = {}  o = spawnObject(t)  o.setCustomObject(i)  do return end
     end
   end
@@ -107,7 +107,7 @@ function makeLink()
     x[1] = x[1]-(5.5 * r2)  x[2]=x[2]+2.5  local p = {}  p.type = "Custom_Token"  p.position = {x[1], x[2], x[3]}
     p.rotation = {0, 90, 0}  p.scale = {0.1, 0.1, 0.1}  p.callback = "cbMLink"  p.callback_owner = self
     local o = spawnObject(p)  local i = {}  i.thickness = 0.01
-    i.image = "https://sites.google.com/site/rolesystemssky/x.png"  o.setCustomObject(i)
+    i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/x.png"  o.setCustomObject(i)
 
 end
 function cbMLink(a)

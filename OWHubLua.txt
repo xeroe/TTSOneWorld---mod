@@ -63,7 +63,7 @@ function iUnit()
   iu = nil  return true
 end
 
-function vCheck()  WebRequest.get("https://sites.google.com/site/rolesystems/owv.txt", self, "cbCheck")  end
+function vCheck()  WebRequest.get("https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/owv.txt", self, "cbCheck")  end
 function cbCheck(a)  if a.text != self.getDescription() then cbp = a.text end  end
 function udShow()  cbp = "x"..cbp
   broadcastToAll("(this will not affect your world bags.)", {0.7, 0.7, 0.7})
@@ -72,8 +72,8 @@ function udShow()  cbp = "x"..cbp
 end
 function newCode()
   local btn = {}  btn.width = 0  btn.height = 0  btn.label = ""  btn.index = 9  self.editButton(btn)
-  WebRequest.get("https://sites.google.com/site/rolesystems/wBaseLua.txt", self, "cbWBLua")
-  WebRequest.get("https://sites.google.com/site/rolesystems/OWHubLua.txt", self, "cbHubLua")
+  WebRequest.get("https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/wBaseLua.txt", self, "cbWBLua")
+  WebRequest.get("https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/OWHubLua.txt", self, "cbHubLua")
 end
 function cbWBLua(a)  wBase.setLuaScript(a.text)  wBase.reload()  end
 function cbHubLua(a)  self.setDescription(string.sub(cbp, 2))
@@ -100,7 +100,7 @@ function upGrade()
       for i = 1, 5 do  n = string.find(t, k, m)  m = n+1  end
       t = string.sub(t, 1, n).."0"..k..string.sub(t, n+1)  g = g..t  n = string.find(s, e)
     end  aBag.setLuaScript(g..s)
-  end  g = "https://sites.google.com/site/rolesystemssky/1world_18.png"
+  end  g = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/1world_18.png"
   if self.getCustomObject().image != g then  local c = {}  c.image = g  self.setCustomObject(c)  self.reload()  end
 end
 
@@ -115,10 +115,10 @@ function tieObjects()
         if g.getName() == "_OW_mTxT" then g.destruct() end
         n = n+1  g = aoj[n]
     end  reStart()
-    i.image = "https://sites.google.com/site/rolesystemssky/table_wood.jpg"  i.thickness = 0.1
+    i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/tablewood.jpg"  i.thickness = 0.1
     if not vBase then o.type = "Custom_Token"  o.position = {-9, -39, 9}  vBase = spawnObject(o)  vBase.setCustomObject(i)  end
     if not sBase then o.type = "Custom_Token"  o.position = {-9, -41, 9}  sBase = spawnObject(o)  sBase.setCustomObject(i)  end
-    i.image = "https://sites.google.com/site/rolesystemssky/cloud.png"  i.thickness = 0.5  i.merge_distance = 5  i.cast_shadows = false
+    i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/cloud.png"  i.thickness = 0.5  i.merge_distance = 5  i.cast_shadows = false
     if not cBase then o.type = "Custom_Token"  o.position = {0, 85, 0}  cBase = spawnObject(o)  cBase.setCustomObject(i)  end
     if not mTxt then o.type = "3DText"  o.position = {0, -3, 0}  mTxt  = spawnObject(o)  end  cbOn({"goTime"})
 end
@@ -275,7 +275,7 @@ function findBags()
     if not aBag then broadcastToAll("Missing Base Token Bag.", {0.943, 0.745, 0.14})  newABag()  return false  end
     if mBag == "e" or aBag == "e" then broadcastToAll("Bag Count Error.", {0.943, 0.745, 0.14})  return false  end
     if not wBase then s = s.." Missing Hub View Token."
-      WebRequest.get("https://sites.google.com/site/rolesystems/wBaseLua.txt", self, "newWBase")
+      WebRequest.get("https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/wBaseLua.txt", self, "newWBase")
     end
     if mBag.getName() == "Same_Name_Here" or aBag.getName() == "Same_Name_Here" then s = s.." ReName Your Bags." end
     if mBag.getName() != aBag.getName() then s = s.." Unmatched Bag Names." end
@@ -284,7 +284,7 @@ function findBags()
 end
 function newWBase(a)
   local o = {}  o.type = "Custom_Token"  o.position = {9, -43, -9}  o.callback = "cbWBase"  o.callback_owner = self
-  local i = {}  i.image = "https://sites.google.com/site/rolesystemssky/table_wood.jpg"  i.thickness = 0.1
+  local i = {}  i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/tablewood.jpg"  i.thickness = 0.1
   ss = a.text  wBase = spawnObject(o)  wBase.setCustomObject(i)
 end
 function cbWBase(a)
@@ -674,7 +674,7 @@ end
 function sglClick()  if os.clock()-mb < 0.8 then do return end end  cbOff()
   local p = {}  p.type = "Custom_Token"  p.position = {0, -23, 0}  p.rotation = {0, 90, 0}  p.callback = "cbNABase"
   p.callback_owner = self  local o = spawnObject(p)  local i = {}
-  i.thickness = 0.1  i.image = "https://sites.google.com/site/rolesystemssky/sample_token.png"  o.setCustomObject(i)
+  i.thickness = 0.1  i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/sample_token.png"  o.setCustomObject(i)
 end
 function cbNABase(a)
   local p = self.getPosition()  a.setScale({0.5, 1, 0.5})  a.setName("SBx_Name of Zone")
