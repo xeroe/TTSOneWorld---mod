@@ -55,7 +55,7 @@ function doImport()
     end
     if o.getDescription() == "" then broadcastToAll("Creating Hidden Base...", {0.943, 0.745, 0.14})
       local t = {}  t.position = {-10, -45, 0}  t.callback = "cbCTBase"  t.callback_owner = self  local i = {}
-      i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/tablewood.jpg"  i.thickness = 0.1
+      i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/table_wood.jpg"  i.thickness = 0.1
       t.type = "Custom_Token"  local o = {}  o = spawnObject(t)  o.setCustomObject(i)  do return end
     end
   end

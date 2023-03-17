@@ -115,7 +115,7 @@ function tieObjects()
         if g.getName() == "_OW_mTxT" then g.destruct() end
         n = n+1  g = aoj[n]
     end  reStart()
-    i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/tablewood.jpg"  i.thickness = 0.1
+    i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/table_wood.jpg"  i.thickness = 0.1
     if not vBase then o.type = "Custom_Token"  o.position = {-9, -39, 9}  vBase = spawnObject(o)  vBase.setCustomObject(i)  end
     if not sBase then o.type = "Custom_Token"  o.position = {-9, -41, 9}  sBase = spawnObject(o)  sBase.setCustomObject(i)  end
     i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/cloud.png"  i.thickness = 0.5  i.merge_distance = 5  i.cast_shadows = false
@@ -284,7 +284,7 @@ function findBags()
 end
 function newWBase(a)
   local o = {}  o.type = "Custom_Token"  o.position = {9, -43, -9}  o.callback = "cbWBase"  o.callback_owner = self
-  local i = {}  i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/tablewood.jpg"  i.thickness = 0.1
+  local i = {}  i.image = "https://raw.githubusercontent.com/ColColonCleaner/TTSOneWorld/main/table_wood.jpg"  i.thickness = 0.1
   ss = a.text  wBase = spawnObject(o)  wBase.setCustomObject(i)
 end
 function cbWBase(a)
