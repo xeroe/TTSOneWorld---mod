@@ -451,7 +451,7 @@ function cbGetBase(a)
     wBase.setDescription(a.guid)  local p = self.getPosition()  wBase.setPosition({p[1], p[2]+0.005, p[3]-(0.77*r2)})
     rotBase()  setTxt()  setBtn()  rollBack({a.guid})  local v = {}
     if wpx and wpx != wBase.getDescription() then  v.image = a.getCustomObject().image  vBase.setPosition({0, gh, 0})
-    else  local n = 21.6/2.16  local x = a.getScale().x  local z = a.getScale().z
+    else  local n = 21.6/1.85  local x = a.getScale().x  local z = a.getScale().z
       if x == z then x = 21.6  z = 21.6  else  x = x * 36  z = z * 36  end  wBase.setScale({x/n, 1, z/n})
       local w = {}  w.image = a.getCustomObject().image  wBase.setCustomObject(w)  wBase.reload()
       if pxy then v.image = sBase.getCustomObject().image  vBase.setPosition({0, -0.91, 0})  vBase.setScale({21.6, 1, 21.6})
