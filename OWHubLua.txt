@@ -315,7 +315,7 @@ function btnFit()  if isPVw() or not aBase or ef then do return end  end
   else  local x = vBase.getBoundsNormalized().size.x  local z = vBase.getBoundsNormalized().size.z
     if z > x * 1.05 then  r90 = 1  x = 52 / x  z = 88 / z else  r90 = 2  x = 88 / x  z = 52 / z  end
     if r90 == 2 and x == 1 and z == 1 then r90 = 0 end
-    vBase.setScale({21.6*x, 1, 21.6*z})  wBase.setScale({1.85*x, 1, 1.85*z})  aBase.setScale({21.6*x/36, 1, 121.6*z/36})
+    vBase.setScale({21.6*x, 1, 21.6*z})  wBase.setScale({1.85*x, 1, 1.85*z})  aBase.setScale({21.6*x/36, 1, 21.6*z/36})
   end  jotBase()  stowBase()  noBase()  setBtn()  setTxt()  broadcastToAll("Packing Base...", {0.943, 0.745, 0.14})
 end
 
