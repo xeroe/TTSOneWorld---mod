@@ -359,7 +359,7 @@ function btnPack()
         p = g.getPosition()  f = g.getGUID()  u = 0  if g.getLock() then u = 1 end
         if math.abs(p[3]) < 26 and math.abs(p[1]) < 44 and math.abs(p[2]) < 26 then
             if string.find("059864@3761d8@ff9bc3@2deca3@649822", f) then m = 1 end
-            if not string.find("FogOfWarTrigger@ScriptingTrigger@3DText", g.name) and not string.find(l, f) and not string.find("_owignore", g.getName()) then
+            if not string.find("FogOfWarTrigger@ScriptingTrigger@3DText", g.name) and not string.find(l, f) and not string.find("_owignore", g.getName())and not string.find("_owignore", g.getGMNotes()) then
               ss = ss..g.guid  r = g.getRotation()  s = s.."--"..f..k..p[1]..k..p[2]..k..p[3]..k..r[1]..k..r[2]..k..r[3]..k..u..a
             end
         end  n = n+1  g = aoj[n]
